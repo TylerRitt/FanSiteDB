@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    List of Stories:
+
+    <h2>This page is also using a custom Layout!!</h2>
+
+    @foreach (Stories s in Model)
+    {
+        <h2>@s.Name</h2><br />
+
+        @s.Story <br />
+        <b>Comments</b>
+        <br />
+        @foreach (Comment c in s.Comments)
+        {
+            @s.Comments <br />
+
+
+        }
+        <br />
+
+        <a href="/Stories/AddComment">Add A Comment!</a>
+
+    }
+
+    <br>
+    <a href="/Home">Home</a>
+    <a href="/Sources/Links">Links</a><br />
+    <a href="/Sources/Books">Books</a>
+
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

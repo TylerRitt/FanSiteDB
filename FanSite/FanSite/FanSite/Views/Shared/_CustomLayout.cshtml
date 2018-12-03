@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*Viewbag two*@
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <h3>Read some Iconic Stories!</h3>
+    <h2>This is using a "Custom" Layout!</h2>
+    <p>
+        Do you have any stories to tell about our Icon?
+        <a href="Stories/AddStory">Post a Story!</a><br />
+        Look at the comments!
+        <a href="Stories/Index">Check Our Current Stories!</a><br />
+
+    </p>
+    <nav>
+        <h4>Navigation:</h4>
+        <a href="Home/History">Some History about our Icon!</a><br />
+        <a href="Sources/Books">Some books on Steve Jobs!</a><br />
+        <a href="Sources/Links">Links</a><br />
+    </nav>
+   
+    <div>
+        @RenderBody()
+    </div>
+    <h4>Contact us!</h4>
+   
+    <address>
+       <strong>Contact:</strong><email mail-to="Contact"></email><br />
+    </address>
+
+
+</body>
+</html>

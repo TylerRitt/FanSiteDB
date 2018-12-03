@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Add A Story!";
+}
+@using Microsoft.AspNetCore.Mvc.RazorPages
+
+@*For using tag helpers*@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
+@model Stories;
+
+<html>
+<head>
+    <title>Add a Story</title>
+</head>
+<body>
+    @*First Form Tag Helper*@
+    <form method="post">
+        <label for="name">Story Title</label>
+        <br />
+        <input asp-for="Name" /><br />
+        <span asp-validation-for="Name"></span>   @*<---- First Validation Tag Helper*@
+        <label for="story">Story</label><br />
+        <span asp-validation-for="Story"></span>  @*<---- Second Validation Tag Helper*@
+        <input asp-for="Story" /><br />
+        <br />
+        <input type="submit" value="Submit Story" />
+    </form>    
+    <br />
+    <a href="Index">Back to the list of stories</a>
+</body>
+</html>
